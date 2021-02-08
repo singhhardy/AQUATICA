@@ -1,9 +1,21 @@
-$(function(){
-    $("#addClass").click(function () {
-              $('#qnimate').addClass('popup-box-on');
-                });
-              
-                $("#removeClass").click(function () {
-              $('#qnimate').removeClass('popup-box-on');
-                });
-      })
+// PRODUCT ADD TO CART ANIMATION
+
+document.addEventListener("DOMContentLoaded", function(event) {
+
+
+  const cartButtons = document.querySelectorAll('.cart-button');
+  
+  cartButtons.forEach(button => {
+  
+  button.addEventListener('click',cartClick);
+  
+  });
+  
+  function cartClick(){
+  let button =this;
+  button.classList.add('clicked');
+  }
+  
+  
+  
+  });

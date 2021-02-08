@@ -610,7 +610,6 @@ img {
 -------------------------- */
 
 .footer-area {
-    margin-left: 8%;
     position: relative;
     z-index: 1;
     background-color: #211b31;
@@ -702,25 +701,165 @@ header{
 
 .sidebar {
     position: fixed;
-    top: 159px;
-    bottom: 80px;
+    top: 150px;
+    bottom: 200px;
     left: 0;
     z-index: 1000;
     display: flex;
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background: #002144;
+    background: #19142634;
     width: 8%;
-    border-right: 1px solid #fff;
 }
 
 .sidebar a{
     color: #fff;
-    font-size: 15px;
+    font-size: 12px;
 }
 
+/* PRODUCT LISTS */
 
-/*  */
+.products{
+    margin-left: 5%;
+}
+
+.wrapper {
+    margin-top: 30px;
+    padding: 40px;
+}
+
+.wrapper .container .card{
+    background: #0141b8c0;
+}
+
+.card {
+    border: 1px solid #eee;
+    cursor: pointer;
+    color: #fff;
+}
+
+.card i{
+    color: #000;
+}
+
+.weight {
+    margin-top: -65px;
+    transition: all 0.5s
+}
+
+.weight small {
+    color: #e2dede
+}
+
+.buttons {
+    padding: 10px;
+    background-color: #d6d4d44f;
+    border-radius: 4px;
+    position: relative;
+    margin-top: 7px;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.dot {
+    height: 14px;
+    width: 14px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    left: 27%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    color: #fff;
+    opacity: 0
+}
+
+.cart-button {
+    height: 48px
+}
+
+.cart-button:focus {
+    box-shadow: none
+}
+
+.cart {
+    position: relative;
+    height: 48px !important;
+    width: 50px;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 11px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 1s ease-in-out;
+    overflow: hidden
+}
+
+.cart-button.clicked span.dot {
+    animation: item 0.3s ease-in forwards
+}
+
+@keyframes item {
+    0% {
+        opacity: 1;
+        top: 30%;
+        left: 30%
+    }
+
+    25% {
+        opacity: 1;
+        left: 26%;
+        top: 0%
+    }
+
+    50% {
+        opacity: 1;
+        left: 23%;
+        top: -22%
+    }
+
+    75% {
+        opacity: 1;
+        left: 19%;
+        top: -18%
+    }
+
+    100% {
+        opacity: 1;
+        left: 14%;
+        top: 28%
+    }
+}
+
+.card:hover .buttons {
+    opacity: 1
+}
+
+.card:hover .weight {
+    margin-top: 10px
+}
+
+.card:hover {
+    transform: scale(1.04);
+    z-index: 2;
+    overflow: hidden
+}
+
+/* MEDIA QUERRIES  */
 
 
+@media(max-width: 700px){
+    video{
+        width: 320px;
+    }
+
+    .sidebar{
+        display: none;
+    }
+}
