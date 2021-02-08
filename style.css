@@ -856,7 +856,7 @@ header{
 
 @media(max-width: 700px){
     video{
-        width: 320px;
+        width: 100%;
     }
 
     .sidebar{
