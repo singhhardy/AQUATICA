@@ -19,3 +19,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   
   
   });
+
+
+  // tESTIMONIALS
+
+  
